@@ -1,0 +1,37 @@
+{
+  "name": "Tvheadend",
+  "id": "tvheadend",
+  "description": {
+    "en": "Tvheadend",
+    "fr": "Tvheadend"
+  },
+  "url": "https://tvheadend.org/",
+  "maintainer": {
+    "name": "txmrl",
+    "email": "txmrl@txmrl.net"
+  },
+  "multi_instance": "false",
+  "arguments": {
+    "install": [
+      {
+        "name": "domain",
+        "type": "domain",
+        "ask": {
+          "en": "Choose a domain for Tvheadend",
+          "fr": "Choisissez un nom de domaine pour Tvheadend"
+        },
+        "example": "domain.org"
+      },
+      {
+        "name": "path",
+        "type": "path",
+        "ask": {
+          "en": "Choose a path for Tvheadend",
+          "fr": "Choisissez un chemin pour Tvheadend"
+        },
+        "example": "/tvheadend",
+        "default": "/tvheadend"
+      }
+    ]
+  }
+}

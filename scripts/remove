@@ -1,0 +1,10 @@
+#!/bin/bash
+
+domain=$(sudo yunohost app setting tvheadend domain)
+
+sudo apt-get autoremove tvheadend --purge
+
+sudo rm /etc/nginx/conf.d/$domain.d/tvheadend.conf
+
+sudo service nginx reload
+sudo yunohost app ssowatconf
