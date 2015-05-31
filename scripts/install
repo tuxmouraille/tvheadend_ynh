@@ -12,8 +12,27 @@ fi
 # Remove trailing "/" for next commands
 path=${path%/}
 
-echo "deb http://apt.tvheadend.org/stable wheezy main"  | sudo tee /etc/apt/sources.list.d/tvheadend2.list
-sudo apt-get update
+# Check port availability
+sudo yunohost app checkport 9981
+if [[ ! $? -eq 0 ]]; then
+  echo Port 9981 for Tvheadend WebUI is not available.
+  exit 1
+fi
+sudo yunohost app checkport 9982
+if [[ ! $? -eq 0 ]]; then
+  echo Port 9982 is for Tvheadend remote control is not available.
+  exit 1
+fi
+
+
+# Open port in firewall
+sudo yunohost firewall allow TCP 9981 > /dev/null 2>&1
+sudo yunohost firewall allow TCP 9982 > /dev/null 2>&1
+
+
+
+echo "deb http://apt.tvheadend.org/stable wheezy main"  | sudo tee /etc/apt/sources.list.d/tvheadend.list
+sudo apt-get update -qq
 sudo apt-get install tvheadend -y
 
 # Configure Nginx and reload
