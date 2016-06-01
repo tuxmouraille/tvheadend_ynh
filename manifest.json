@@ -35,7 +35,7 @@
       {
         "name": "admin",
         "ask": {
-          "en": "Admin login"
+          "en": "Admin login",
           "fr": "Identifiant administrateur"
         },
         "example": "admin",
@@ -44,7 +44,7 @@
       {
         "name": "adminPass",
         "ask": {
-            "en": "Admin password"
+            "en": "Admin password",
             "fr": "Mot de passe administrateur"
         },
         "example": "Za6kohth9cuwu3isohjo"
