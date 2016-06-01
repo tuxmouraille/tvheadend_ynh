@@ -43,7 +43,7 @@ echo "deb https://dl.bintray.com/tvheadend/deb $DEB_VERSION release" | sudo tee 
 sudo apt-get install apt-transport-https
 sudo apt-get update
 #export DEBIAN_FRONTEND=noninteractive
-sudo apt-get install tvheadend -y
+sudo -E apt-get install tvheadend -y
 
 # Configure Nginx et all
 sed -i "s@PATHTOCHANGE@$path@g" ../conf/nginx.conf
