@@ -15,7 +15,7 @@
     "requirements": {
         "yunohost": ">= 2.4.0"
     },
-    "multi_instance": "false",,
+    "multi_instance": "false",
     "services": [
         "tvheadend"
     ],
