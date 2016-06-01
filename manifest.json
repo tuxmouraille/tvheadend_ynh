@@ -31,6 +31,23 @@
         },
         "example": "/tvheadend",
         "default": "/tvheadend"
+      },
+      {
+        "name": "admin",
+        "ask": {
+          "en": "Admin login"
+          "fr": "Identifiant administrateur"
+        },
+        "example": "admin",
+        "default": "admin"
+      },
+      {
+        "name": "adminPass",
+        "ask": {
+            "en": "Admin password"
+            "fr": "Mot de passe administrateur"
+        },
+        "example": "Za6kohth9cuwu3isohjo"
       }
     ]
   }
