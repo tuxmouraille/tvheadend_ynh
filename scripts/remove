@@ -3,7 +3,7 @@
 domain=$(sudo yunohost app setting tvheadend domain)
 
 # Remove Tvheadend's packages and repository
-sudo apt-get autoremove tvheadend --purge
+sudo apt-get autoremove tvheadend --purge -y
 sudo rm /etc/apt/sources.list.d/tvheadend.list
 
 # Remove Tvheadend's nginx configuration
