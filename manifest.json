@@ -21,33 +21,41 @@
     "services": [
         "nginx"
     ],
-    "arguments":
-    {
-        "install":
-        [
+    "arguments": {
+        "install": [
             {
                 "name": "domain",
                 "type": "domain",
-                "ask": { "en": "Choose a domain for Tvheadend", "fr": "Choisissez un nom de domaine pour Tvheadend" },
+                "ask": {
+                    "en": "Choose a domain for Tvheadend",
+                    "fr": "Choisissez un nom de domaine pour Tvheadend"
+                },
                 "example": "domain.org"
             },
             {
                 "name": "path",
                 "type": "path",
-                "ask": { "en": "Choose a path for Tvheadend","fr": "Choisissez un chemin pour Tvheadend" },
+                "ask": {
+                    "en": "Choose a path for Tvheadend",
+                    "fr": "Choisissez un chemin pour Tvheadend"
+                },
                 "example": "/tvheadend",
                 "default": "/tvheadend"
             },
             {
                 "name": "admin",
-                "ask": { "en": "Admin login","fr": "Identifiant administrateur" },
-                "example": "admin",
-                "default": "admin"
+                "ask": {
+                    "en": "Admin login (must be an existing YunoHost user)",
+                    "fr": "Identifiant administrateur (doit être un utilisateur YunoHost existant)"
+                }
             },
             {
-                "name": "adminPass",
+                "name": "password",
                 "type": "password",
-                "ask": { "en": "Admin password","fr": "Mot de passe administrateur" },
+                "ask": {
+                    "en": "Admin password",
+                    "fr": "Mot de passe administrateur"
+                },
                 "example": "Za6kohth9cuwu3isohjo"
             }
         ]
