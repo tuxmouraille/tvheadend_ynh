@@ -39,7 +39,7 @@
                 "default": "/tvheadend"
             },
             {
-                "name": "admin",
+                "name": "user",
                 "type": "user",
                 "ask": { "en": "Admin login","fr": "Identifiant administrateur" },
                 "example": "admin",
