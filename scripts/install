@@ -37,7 +37,6 @@ fi
 sudo yunohost firewall allow TCP 9981 > /dev/null 2>&1
 sudo yunohost firewall allow TCP 9982 > /dev/null 2>&1
 
-
 # Add Tvheadend repository
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61 
 echo "deb https://dl.bintray.com/tvheadend/deb $DEB_VERSION release" | sudo tee /etc/apt/sources.list.d/tvheadend.list
@@ -46,10 +45,15 @@ sudo apt-get update -qq
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install tvheadend -y
 
-# Configure Nginx and reload
+# Configure Nginx et all
 sed -i "s@PATHTOCHANGE@$path@g" ../conf/nginx.conf
 sudo cp ../conf/nginx.conf /etc/nginx/conf.d/$domain.d/tvheadend.conf
 sudo cp ../conf/superuser /home/hts/.hts/tvheadend/superuser
+
+# Remove acces to all users to remove tile
+sudo yunohost app removeaccess tvheadend
+
+# Reload or restart
 sudo service tvheadend restart
 sudo service nginx reload
 sudo yunohost app ssowatconf

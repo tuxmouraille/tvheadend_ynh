@@ -9,6 +9,9 @@ sudo rm /etc/apt/sources.list.d/tvheadend.list
 # Remove Tvheadend's nginx configuration
 sudo rm /etc/nginx/conf.d/$domain.d/tvheadend.conf
 
+# Remove superuser configuration
+sudo rm /home/hts/.hts/tvheadend/superuser
+
 # Close port in firewall
 sudo yunohost firewall disallow TCP 9981 > /dev/null 2>&1
 sudo yunohost firewall disallow TCP 9982 > /dev/null 2>&1
