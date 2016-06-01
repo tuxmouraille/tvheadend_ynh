@@ -42,7 +42,7 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D
 echo "deb https://dl.bintray.com/tvheadend/deb $DEB_VERSION release" | sudo tee /etc/apt/sources.list.d/tvheadend.list
 sudo apt-get install apt-transport-https
 sudo apt-get update
-#export DEBIAN_FRONTEND=noninteractive
+export DEBIAN_FRONTEND=noninteractive
 sudo -E apt-get install tvheadend -y
 
 # Configure Nginx et all
