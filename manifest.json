@@ -39,14 +39,14 @@
                 "default": "/tvheadend"
             },
             {
-                "name": "user",
-                "type": "user",
+                "name": "admin",
                 "ask": { "en": "Admin login","fr": "Identifiant administrateur" },
                 "example": "admin",
                 "default": "admin"
             },
             {
                 "name": "adminPass",
+                "type": "password",
                 "ask": { "en": "Admin password","fr": "Mot de passe administrateur" },
                 "example": "Za6kohth9cuwu3isohjo"
             }
