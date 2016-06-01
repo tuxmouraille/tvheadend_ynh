@@ -10,8 +10,8 @@ sudo rm /etc/apt/sources.list.d/tvheadend.list
 sudo rm /etc/nginx/conf.d/$domain.d/tvheadend.conf
 
 # Close port in firewall
-sudo yunohost firewall allow TCP 9981 > /dev/null 2>&1
-sudo yunohost firewall allow TCP 9982 > /dev/null 2>&1
+sudo yunohost firewall disallow TCP 9981 > /dev/null 2>&1
+sudo yunohost firewall disallow TCP 9982 > /dev/null 2>&1
 
 # Reload nginx and SSOwat
 sudo service nginx reload
