@@ -1,12 +1,14 @@
 {
     "name": "Tvheadend",
     "id": "tvheadend",
+    "packaging_format": 1,
     "description":
     {
         "en": "Tvheadend",
         "fr": "Tvheadend"
     },
     "url": "https://tvheadend.org/",
+    "license": "free",
     "maintainer":
     {
         "name": "txmrl",
@@ -15,9 +17,9 @@
     "requirements": {
         "yunohost": ">= 2.4.0"
     },
-    "multi_instance": "false",
+    "multi_instance": false,
     "services": [
-        "tvheadend"
+        "nginx"
     ],
     "arguments":
     {
@@ -38,6 +40,7 @@
             },
             {
                 "name": "admin",
+                "type": "user",
                 "ask": { "en": "Admin login","fr": "Identifiant administrateur" },
                 "example": "admin",
                 "default": "admin"
