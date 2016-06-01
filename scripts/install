@@ -58,7 +58,7 @@ sudo cp ../conf/superuser /home/hts/.hts/tvheadend/superuser
 
 # Remove acces to all users to remove tile
 sudo yunohost app removeaccess tvheadend
-sudo yunohost app addaccess -u $admin tvheadend
+sudo yunohost app addaccess tvheadend -u $admin
 
 # Reload or restart
 sudo service tvheadend restart
