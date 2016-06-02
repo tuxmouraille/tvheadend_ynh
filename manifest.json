@@ -43,13 +43,6 @@
                 "default": "/tvheadend"
             },
             {
-                "name": "admin",
-                "ask": {
-                    "en": "Tvheadend admin login",
-                    "fr": "Identifiant de l'admin Tvheadened"
-                }
-            },
-            {
                 "name": "password",
                 "type": "password",
                 "ask": {

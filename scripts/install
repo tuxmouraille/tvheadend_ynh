@@ -3,9 +3,9 @@
 # Retrieve arguments
 domain=$1
 path=$2
-admin=$3
-adminpass=$4
-user=$5
+admin=tvheadend
+adminpass=$3
+user=$4
 
 # Check Wheezy or Jessie
 DEB_VERSION=$(lsb_release -cs)
