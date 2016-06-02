@@ -48,6 +48,9 @@ sudo apt-get update
 export DEBIAN_FRONTEND=noninteractive
 sudo -E apt-get install tvheadend -y
 
+# Manager Tvheadend service with Yunohost
+sudo yunohost service add tvheadend
+
 # Configure Nginx et all
 credential=$(echo -n "$admin:$adminpass" | base64)
 sed -i "s@ADMINNAME@$admin@g" ../conf/superuser
