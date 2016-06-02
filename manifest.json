@@ -45,8 +45,8 @@
             {
                 "name": "admin",
                 "ask": {
-                    "en": "Admin login (must be an existing YunoHost user)",
-                    "fr": "Identifiant administrateur (doit être un utilisateur YunoHost existant)"
+                    "en": "Tvheadend admin login",
+                    "fr": "Identifiant de l'admin Tvheadened"
                 }
             },
             {
@@ -57,6 +57,14 @@
                     "fr": "Mot de passe administrateur"
                 },
                 "example": "Za6kohth9cuwu3isohjo"
+            },
+            {
+                "name": "user",
+                "type": "user",
+                "ask": {
+                    "en": "First user (must be an existing YunoHost user)",
+                    "fr": "Utilisateur (doit être un utilisateur YunoHost existant)"
+                }
             }
         ]
     }

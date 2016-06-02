@@ -5,6 +5,7 @@ domain=$1
 path=$2
 admin=$3
 adminpass=$4
+user=$5
 
 # Check Wheezy or Jessie
 DEB_VERSION=$(lsb_release -cs)
@@ -58,7 +59,7 @@ sudo cp ../conf/superuser /home/hts/.hts/tvheadend/superuser
 
 # Remove acces to all users to remove tile
 sudo yunohost app removeaccess tvheadend
-sudo yunohost app addaccess tvheadend -u $admin
+sudo yunohost app addaccess tvheadend -u $user
 
 # Reload or restart
 sudo service tvheadend restart
