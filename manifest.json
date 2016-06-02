@@ -47,9 +47,7 @@
                 "ask": {
                     "en": "Tvheadend admin login",
                     "fr": "Identifiant de l'admin Tvheadened"
-                },
-                "example": "admin",
-                "default": "admin"
+                }
             },
             {
                 "name": "password",
