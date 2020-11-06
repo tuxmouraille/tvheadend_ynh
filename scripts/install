@@ -36,10 +36,6 @@ if [[ ! $? -eq 0 ]]; then
   exit 1
 fi
 
-# Open port in firewall
-sudo yunohost firewall allow TCP 9981 > /dev/null 2>&1
-sudo yunohost firewall allow TCP 9982 > /dev/null 2>&1
-
 # Add Tvheadend repository
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61
 echo "deb https://dl.bintray.com/tvheadend/deb $DEB_VERSION release" | sudo tee /etc/apt/sources.list.d/tvheadend.list
